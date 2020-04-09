@@ -27,3 +27,13 @@ class login(View):
         form = AuthenticationForm()
         data = {'login':form}
         return render(request,'accounts/login.html',data)
+    def post(self, request,*args, **kwargs):
+        form = AuthenticationForm()
+        if form.is_valid():
+            user = form.get_user()
+            login(request,user)
+
+class logout(View):
+    def post(self, request,*args, **kwargs):
+        logout(request)
+
