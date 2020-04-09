@@ -28,8 +28,9 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#"><img src="https://i.ya-webdesign.com/images/the-letter-a-png-4.png"
-                                width="30" height="30" class="d-inline-block align-top" alt="">
+                        <a class="nav-link" href="{%url 'index'%}"><img
+                                src="https://i.ya-webdesign.com/images/the-letter-a-png-4.png" width="30" height="30"
+                                class="d-inline-block align-top" alt="">
                             Order System</a>
                     </li>
                     <li class="nav-item">
@@ -38,10 +39,10 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="{%url 'accounts:login'%}">Login</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Sign Up</a>
+                        <a class="nav-link" href="{%url 'accounts:signUp'%}">Sign Up</a>
                     </li>
                 </ul>
             </div>
