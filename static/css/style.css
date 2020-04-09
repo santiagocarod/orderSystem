@@ -1,11 +1,19 @@
  body {
-     background-color: #fff5d7;
- }
- .colorWhite{
+     background-color: #FECC81 !important;
      color: white;
  }
 
-/*
+ .navbar-light .navbar-nav .nav-link {
+     color: white !important;
+     cursor: pointer !important;
+ }
+
+ body .navbar .navbar-expand-lg .navbar-light {
+     background-color: #1561ad !important;
+ }
+
+
+ /*
 Left Blue: #1561ad
 
 Right Blue- Muted: #1c77ac
@@ -13,4 +21,13 @@ Right Blue- Muted: #1c77ac
 Blue-Green: #1dbab4
 
 Red-Orange: #fc5226
+
+
+Yellow Background: #ffde22
+
+Pink / Red Circle: #ff414e
+
+Orange Circle: #ff8928
+
+White Layover: #ffffff
 */

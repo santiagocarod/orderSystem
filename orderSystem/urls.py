@@ -22,5 +22,6 @@ app_name ='orderSystem'
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',orderViews.index,name='index'),
-    url(r'^accounts/',include('accounts.urls',namespace='accounts'))
+    url(r'^accounts/',include('accounts.urls',namespace='accounts')),
+    url(r'^app/',orderViews.appIndex,name='appindex'),
 ]

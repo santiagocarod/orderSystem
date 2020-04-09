@@ -12,10 +12,10 @@
       </div>
     {%endif%}
 
-    <form method="post" novalidate>
+    <form method="post" action="{%url 'accounts:login'%}">
         {% csrf_token %}
         {{ login|crispy }}
-        <button type="submit" class="btn btn-success">Log In</button>
+        <button type="submit" class="btn btn-outline-success">Log In</button>
     </form>
 </div>
 </div>
