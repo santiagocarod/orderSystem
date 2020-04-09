@@ -12,7 +12,7 @@
       </div>
     {%endif%}
 
-    <form method="post" action="{%url 'accounts:signUp'%}" novalidate>
+    <form method="post" action="{%url 'accounts:signUp'%}">
         {% csrf_token %}
         {{ signUp|crispy }}
         <button type="submit" class="btn btn-outline-success">Sign Up</button>
