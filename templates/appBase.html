@@ -25,6 +25,10 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FF9900;">
         <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -34,7 +38,7 @@
                             Order System</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Supplies</a>
+                        <a class="nav-link" href="{%url 'supplies:suppliesIndex'%}">Supplies</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Products</a>
@@ -49,7 +53,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <form method="post" action="{%url 'accounts:logout'%}">
-                            {% csrf_token %} 
+                            {% csrf_token %}
                             <a class="nav-link" onclick="parentNode.submit();">Log Out</a>
                         </form>
                     </li>

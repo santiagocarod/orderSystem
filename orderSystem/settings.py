@@ -25,7 +25,7 @@ SECRET_KEY = 'a_d+iv8j7k6t5znzul)g&qo-&vgrb1b2-9(73*xd+%p0m5$tn7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['santiagocaroduque.hopto.org','localhost']
+ALLOWED_HOSTS = ['santiagocaroduque.hopto.org','localhost','192.168.1.132']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'accounts',
+    'supplies',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

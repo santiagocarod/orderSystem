@@ -1,0 +1,20 @@
+{%extends "appBase.html"%}
+{% load crispy_forms_tags %}
+
+{%block content%}
+<div class="container">
+
+    <h1>
+        <center>Supplies</center>
+    </h1>
+    <ul class="list-group">
+    {%for item in supplies%}
+        <li class="list-group-item">{{item}}</li>
+    {%endfor%}
+    </ul>
+    <br>
+    <form method="get" action="{%url 'supplies:newSupply'%}">
+        <button type="submit" class="btn btn-primary">New Supply</button>
+    </form>
+</div>
+{%endblock content%}
