@@ -3,9 +3,11 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .forms import newSupplyForm
 from .models import supply
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 # Create your views here.
 
-
+@method_decorator(login_required,name='dispatch')
 class newSupply(View):
     def get(self, request, *args, **kwargs):
         form = newSupplyForm()
@@ -20,7 +22,7 @@ class newSupply(View):
             data = {'form': form}
             return render(request, 'supplies/newSupply.html',data)
 
-
+@method_decorator(login_required,name='dispatch')
 class supplyIndex(View):
     def get(self, request, *args, **kwargs):
         supplies = supply.objects.all()
