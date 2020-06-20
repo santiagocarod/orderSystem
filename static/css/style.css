@@ -12,6 +12,11 @@
      background-color: #1561ad !important;
  }
 
+td form {
+    display: inline;
+}
+
+
 
  /*
 Left Blue: #1561ad
