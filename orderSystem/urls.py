@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^accounts/',include('accounts.urls',namespace='accounts')),
     url(r'^app/',orderViews.appIndex,name='appindex'),
     url(r'^supplies/',include('supplies.urls',namespace='supplies')),
+    url(r'^products/',include('products.urls',namespace='products')),
 ]

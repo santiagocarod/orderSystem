@@ -1,0 +1,50 @@
+{%extends "appBase.html"%}
+{% load crispy_forms_tags %}
+
+{%block content%}
+<div class="container">
+
+    <h1>
+        <center>Products</center>
+    </h1>
+    <ul class="list-group">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for item in products%}
+                <tr>
+                    <td>{{item.name}}</td>
+                    <td>{{item.cost}}</td>
+                    <td>
+                        <form action="/products/editSupply" method="get">
+                            <input type="hidden" name="id" value="{{item.id}}">
+                            <button type="submit" class="btn btn-outline-warning">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </form>
+                        <form action="/products/deleteSupply/" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="id" value="{{item.id}}">
+                            <button type="submit" class="btn btn-outline-danger">
+                                <i class="fas fa-trash-alt    "></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+
+    </ul>
+    <br>
+    <form method="get" action="{%url 'products:newProduct'%}">
+        <button type="submit" class="btn btn-primary">New Product</button>
+    </form>
+</div>
+{%endblock content%}
